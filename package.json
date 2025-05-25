@@ -32,7 +32,7 @@
   "scripts": {
     "build": "npm run clean && npm run lint && tsc",
     "clean": "rimraf ./lib",
-    "client": "npm run build && node ./lib/exaclientmple.js",
+    "client": "npm run build && node ./lib/client.js",
     "lint": "eslint src/**/*.ts --max-warnings=0",
     "lint-fix": "eslint src/**/*.ts --max-warnings=0 --fix",
     "prepublishOnly": "npm run build"

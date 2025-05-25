@@ -1,0 +1,55 @@
+{
+  "name": "airthings-consumer-mcp",
+  "displayName": "Airthings Consumer MCP",
+  "version": "1.0.0",
+  "description": "Airthings Consumer MCP",
+  "keywords": [
+    "airthings",
+    "mcp"
+  ],
+  "homepage": "https://github.com/michaelahern/airthings-consumer-mcp",
+  "bugs": {
+    "url": "http://github.com/michaelahern/airthings-consumer-mcp/issues"
+  },
+  "license": "ISC",
+  "author": "Michael Ahern <michael.ahern@gmail.com>",
+  "files": [
+    "./lib"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./lib/module.js",
+      "types": "./lib/module.d.ts"
+    }
+  },
+  "main": "./lib/module.js",
+  "types": "./lib/module.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/michaelahern/airthings-consumer-mcp.git"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run lint && tsc",
+    "clean": "rimraf ./lib",
+    "client": "npm run build && node ./lib/exaclientmple.js",
+    "lint": "eslint src/**/*.ts --max-warnings=0",
+    "lint-fix": "eslint src/**/*.ts --max-warnings=0 --fix",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "~1.12",
+    "airthings-consumer-api": "^1"
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^4",
+    "@types/node": "^20",
+    "eslint": "^9",
+    "rimraf": "^6",
+    "typescript": "~5.8",
+    "typescript-eslint": "^8"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

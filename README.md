@@ -1,0 +1,1 @@
+# airthings-consumer-mcp

@@ -1,6 +1,6 @@
-import { AirthingsClient, SensorUnits } from 'airthings-consumer-api';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
+import { AirthingsClient, SensorUnits } from 'airthings-consumer-api';
 
 const clientId = process.env.AIRTHINGS_CLIENT_ID;
 const clientSecret = process.env.AIRTHINGS_CLIENT_SECRET;
@@ -17,7 +17,8 @@ const client = new AirthingsClient({
 
 const server = new McpServer({
     name: 'Airthings',
-    version: '1.0.0'
+    version: '1.0.0',
+    description: 'Airthings air quality device monitoring server',
 });
 
 server.tool(

@@ -28,29 +28,29 @@ server.tool(
         const devices = await client.getDevices();
         const sensors = await client.getSensors(SensorUnits.Imperial);
 
-        let text = '';
+        const lines: string[] = [];
         devices.devices.forEach((d) => {
-            text += `${d.name} is an Airthings ${d.type.replace(/_/g, ' ').toLowerCase().replace(/\b\w/g, char => char.toUpperCase())}`
-                + ` with serial number ${d.serialNumber} that supports the following air quality sensors: ${d.sensors.join(', ')}.\n`;
+            lines.push(`${d.name} is an Airthings ${d.type.replace(/_/g, ' ').toLowerCase().replace(/\b\w/g, char => char.toUpperCase())}`
+                + ` with serial number ${d.serialNumber} that supports the following air quality sensors: ${d.sensors.join(', ')}.`);
 
             const sensorData = sensors.results.find(r => r.serialNumber === d.serialNumber);
             if (sensorData && sensorData.recorded) {
-                text += `Current air quality sensor readings for ${d.name}:\n`;
+                lines.push(`Current air quality sensor readings for ${d.name}:`);
                 sensorData.sensors.forEach((s) => {
-                    text += `- ${s.sensorType}: ${s.value}${s.unit}\n`;
+                    lines.push(`- ${s.sensorType}: ${s.value}${s.unit}`);
                 });
             }
             else {
-                text += `No current readings are available for ${d.name}.\n`;
+                lines.push(`No current readings are available for ${d.name}.`);
             }
 
-            text += '\n';
+            lines.push('');
         });
 
         return {
             content: [{
                 type: 'text',
-                text: text
+                text: lines.join('\n')
             }]
         };
     }

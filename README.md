@@ -7,13 +7,7 @@
 
 A Model Context Protocol (MCP) server for Airthings air quality monitoring devices.
 
-## Components
-
-### Tools: airthings
-
-
-
-### Claude Desktop
+## Claude Desktop
 
 [claude_desktop_config.json](https://modelcontextprotocol.io/quickstart/user)
 
@@ -31,3 +25,7 @@ A Model Context Protocol (MCP) server for Airthings air quality monitoring devic
   }
 }
 ```
+
+## Sample Interaction
+
+![Claude Screenshot](./claude.png)

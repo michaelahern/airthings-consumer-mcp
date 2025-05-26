@@ -11,7 +11,7 @@ if (!clientId || !clientSecret) {
 
 const transport = new StdioClientTransport({
     command: 'node',
-    args: ['./lib/server.js'],
+    args: ['./lib/module.js'],
     env: {
         AIRTHINGS_CLIENT_ID: clientId,
         AIRTHINGS_CLIENT_SECRET: clientSecret,

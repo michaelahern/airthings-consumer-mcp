@@ -28,4 +28,4 @@ A Model Context Protocol (MCP) server for Airthings air quality monitoring devic
 
 ## Sample Interaction
 
-![Claude Screenshot](./claude.png)
+![Screenshot of Claude Desktop showing a sample interaction with Airthings Consumer MCP Server](./claude.png)

@@ -1,7 +1,7 @@
 {
   "name": "airthings-consumer-mcp",
   "displayName": "Airthings Consumer MCP",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Model Context Protocol (MCP) server for Airthings air quality monitoring devices.",
   "keywords": [
     "airthings",
@@ -14,25 +14,23 @@
   "license": "ISC",
   "author": "Michael Ahern <michael.ahern@gmail.com>",
   "files": [
-    "./lib"
+    "./bin"
   ],
   "type": "module",
-  "exports": {
-    ".": {
-      "default": "./lib/module.js",
-      "types": "./lib/module.d.ts"
-    }
+  "main": "./bin/server.js",
+  "types": "./bin/server.d.ts",
+  "bin": {
+    "airthings-consumer-mcp": "bin/server.js",
+    "airthings-consumer-mcp-client": "bin/client.js"
   },
-  "main": "./lib/module.js",
-  "types": "./lib/module.d.ts",
   "repository": {
     "type": "git",
     "url": "git://github.com/michaelahern/airthings-consumer-mcp.git"
   },
   "scripts": {
     "build": "npm run clean && npm run lint && tsc",
-    "clean": "rimraf ./lib",
-    "client": "npm run build && node ./lib/client.js",
+    "clean": "rimraf ./bin",
+    "client": "npm run build && node ./bin/client.js",
     "lint": "eslint src/**/*.ts --max-warnings=0",
     "lint-fix": "eslint src/**/*.ts --max-warnings=0 --fix",
     "prepublishOnly": "npm run build"

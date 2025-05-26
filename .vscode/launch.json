@@ -6,7 +6,7 @@
             "request": "launch",
             "name": "client",
             "preLaunchTask": "npm: build",
-            "program": "${workspaceFolder}/lib/client.js",
+            "program": "${workspaceFolder}/bin/client.js",
             "skipFiles": [
                 "<node_internals>/**"
             ]

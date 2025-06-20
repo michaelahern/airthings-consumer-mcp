@@ -1,7 +1,7 @@
 {
   "name": "airthings-consumer-mcp",
   "displayName": "Airthings Consumer MCP",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A Model Context Protocol (MCP) server for Airthings air quality monitoring devices.",
   "keywords": [
     "airthings",
@@ -28,7 +28,7 @@
     "url": "git://github.com/michaelahern/airthings-consumer-mcp.git"
   },
   "scripts": {
-    "build": "npm run clean && npm run lint && tsc",
+    "build": "npm run lint && tsc",
     "clean": "rimraf ./bin",
     "client": "npm run build && node ./bin/client.js",
     "lint": "eslint src/**/*.ts --max-warnings=0",
@@ -36,7 +36,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "~1.12",
+    "@modelcontextprotocol/sdk": "~1.13",
     "airthings-consumer-api": "^1"
   },
   "devDependencies": {

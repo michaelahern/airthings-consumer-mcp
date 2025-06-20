@@ -17,3 +17,6 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run client
+        env:
+          AIRTHINGS_CLIENT_ID: ${{secrets.AIRTHINGS_CLIENT_ID}}
+          AIRTHINGS_CLIENT_SECRET: ${{secrets.AIRTHINGS_CLIENT_SECRET}}

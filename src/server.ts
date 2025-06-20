@@ -3,6 +3,7 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { AirthingsClient, SensorUnits } from 'airthings-consumer-api';
+import { readFileSync } from 'node:fs';
 
 const clientId = process.env.AIRTHINGS_CLIENT_ID;
 const clientSecret = process.env.AIRTHINGS_CLIENT_SECRET;
@@ -17,9 +18,12 @@ const client = new AirthingsClient({
     clientSecret: clientSecret
 });
 
+const packageJson = readFileSync(new URL('../package.json', import.meta.url), 'utf8');
+const packageInfo = JSON.parse(packageJson);
+
 const server = new McpServer({
     name: 'Airthings',
-    version: '1.0.0',
+    version: packageInfo.version,
     description: 'A Model Context Protocol (MCP) server for Airthings air quality monitoring devices.'
 });
 

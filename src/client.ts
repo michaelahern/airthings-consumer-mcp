@@ -2,6 +2,7 @@
 
 import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import { StdioClientTransport, getDefaultEnvironment } from '@modelcontextprotocol/sdk/client/stdio.js';
+import { readFileSync } from 'node:fs';
 
 const clientId = process.env.AIRTHINGS_CLIENT_ID;
 const clientSecret = process.env.AIRTHINGS_CLIENT_SECRET;
@@ -21,14 +22,20 @@ const transport = new StdioClientTransport({
     }
 });
 
+const packageJson = readFileSync(new URL('../package.json', import.meta.url), 'utf8');
+const packageInfo = JSON.parse(packageJson);
+
 const client = new Client(
     {
         name: 'Airthings Client',
-        version: '1.0.0'
+        version: packageInfo.version
     }
 );
 
 await client.connect(transport);
+
+const serverVersion = client.getServerVersion();
+console.log(serverVersion);
 
 const tools = await client.listTools();
 console.log(tools);
@@ -37,3 +44,5 @@ const airthings = await client.callTool({
     name: 'airthings'
 });
 console.log(airthings);
+
+transport.close();

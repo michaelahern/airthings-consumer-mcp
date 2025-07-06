@@ -2,11 +2,11 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "node",
+      "type": "node-terminal",
       "request": "launch",
       "name": "client",
       "preLaunchTask": "npm: build",
-      "program": "${workspaceFolder}/bin/client.js",
+      "command": "npm run client",
       "skipFiles": [
         "<node_internals>/**"
       ]

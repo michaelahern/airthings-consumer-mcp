@@ -14,6 +14,8 @@
     }
   },
   "updateContentCommand": {
+    "amazon-q-install": ".devcontainer/amazonq.sh",
+    "claude-code-install": "npm install -g @anthropic-ai/claude-code",
     "npm-install": "npm install"
   },
   "postStartCommand": {

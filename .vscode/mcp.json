@@ -1,0 +1,10 @@
+{
+  "servers": {
+    "airthings-consumer-mcp": {
+      "command": "npx",
+      "args": [
+        "airthings-consumer-mcp"
+      ]
+    }
+  }
+}

@@ -5,7 +5,7 @@
 [![downloads](https://badgen.net/npm/dt/airthings-consumer-mcp)](https://www.npmjs.com/package/airthings-consumer-mcp)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/michaelahern/airthings-consumer-mcp)
 
-A Model Context Protocol (MCP) server for Airthings air quality monitoring devices.
+A Model Context Protocol (MCP) server for Airthings Air Quality Monitor devices.
 
 ## Claude Desktop
 

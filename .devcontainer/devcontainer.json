@@ -3,13 +3,23 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "amazonwebservices.amazon-q-vscode",
+        "Anthropic.claude-code",
         "bierner.markdown-preview-github-styles",
         "dbaeumer.vscode-eslint",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
         "github.vscode-github-actions"
       ]
     }
   },
   "updateContentCommand": {
+    "amazon-q-install": ".devcontainer/amazonq.sh",
+    "claude-code-install": "npm install -g @anthropic-ai/claude-code",
     "npm-install": "npm install"
+  },
+  "postStartCommand": {
+    "npm-build": "npm run build",
+    "npm-link": "npm link"
   }
 }

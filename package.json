@@ -30,13 +30,13 @@
   "scripts": {
     "build": "npm run lint && tsc",
     "clean": "rimraf ./bin",
-    "client": "npm run build && node ./bin/client.js",
+    "client": "node ./bin/client.js",
     "lint": "eslint --max-warnings=0",
     "lint-fix": "eslint --max-warnings=0 --fix",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "~1.13",
+    "@modelcontextprotocol/sdk": "~1.15",
     "airthings-consumer-api": "^1"
   },
   "devDependencies": {

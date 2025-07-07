@@ -101,10 +101,6 @@ $ q
  ⋮    "name": "airthings"
  ⋮  }
 
-Allow this action? Use 't' to trust (always allow) this tool for the session. [y/n/t]:
-
-> t
-
 > ## Kitchen Air Quality - Very Good Overall
 
 Excellent readings:

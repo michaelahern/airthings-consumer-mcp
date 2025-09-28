@@ -9,22 +9,14 @@ A Model Context Protocol (MCP) server for Airthings Air Quality Monitor devices.
 
 ## Claude Desktop
 
-[claude_desktop_config.json](https://modelcontextprotocol.io/quickstart/user)
+Download airthings-consumer-mcp.mcpb from [Releases](https://github.com/michaelahern/airthings-consumer-mcp/releases)
 
-```json
-{
-  "mcpServers": {
-    "airthings": {
-      "command": "npx",
-      "args": ["-y", "airthings-consumer-mcp"],
-      "env": {
-        "AIRTHINGS_CLIENT_ID": "[AIRTHINGS_CLIENT_ID]",
-        "AIRTHINGS_CLIENT_SECRET": "[AIRTHINGS_CLIENT_SECRET]"
-      }
-    }
-  }
-}
-```
+### Installation
+
+ * [Getting Started with Local MCP Servers on Claude Desktop](https://support.claude.com/en/articles/10949351-getting-started-with-local-mcp-servers-on-claude-desktop)
+ * [Desktop Extensions: One-click MCP server installation for Claude Desktop](https://www.anthropic.com/engineering/desktop-extensions)
+
+### Screenshot
 
 ![Screenshot of Claude Desktop showing a sample interaction with Airthings Consumer MCP Server](./claude.png)
 

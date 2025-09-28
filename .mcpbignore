@@ -1,0 +1,15 @@
+.amazonq
+.claude
+.devcontainer
+.git
+.github
+.vscode
+src
+.editorconfig
+.gitattributes
+.gitignore
+.mcp.json
+.mcpbignore
+claude.png
+eslint.config.js
+tsconfig.json

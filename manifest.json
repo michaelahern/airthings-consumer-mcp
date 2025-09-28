@@ -9,11 +9,11 @@
   },
   "server": {
     "type": "node",
-    "entry_point": "server/server.js",
+    "entry_point": "bin/server.js",
     "mcp_config": {
       "command": "node",
       "args": [
-        "${__dirname}/server/server.js"
+        "${__dirname}/bin/server.js"
       ],
       "env": {
         "AIRTHINGS_CLIENT_ID": "${user_config.client_id}",

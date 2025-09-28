@@ -1,6 +1,7 @@
 .amazonq
 .claude
 .devcontainer
+.git
 .github
 .vscode
 src
@@ -8,6 +9,7 @@ src
 .gitattributes
 .gitignore
 .mcp.json
+.mcpbignore
 claude.png
 eslint.config.js
 tsconfig.json

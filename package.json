@@ -1,7 +1,7 @@
 {
   "name": "airthings-consumer-mcp",
   "displayName": "Airthings Consumer MCP",
-  "version": "0.7.0",
+  "version": "1.0.0",
   "description": "A Model Context Protocol (MCP) server for Airthings Air Quality Monitor devices.",
   "keywords": [
     "airthings",

@@ -2,11 +2,16 @@
   "manifest_version": "0.2",
   "name": "airthings-consumer-mcp",
   "display_name": "Airthings Consumer MCP",
-  "version": "0.7.0",
+  "version": "1.0.0",
   "description": "A Model Context Protocol (MCP) server for Airthings Air Quality Monitor devices.",
   "author": {
     "name": "Michael Ahern"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michaelahern/airthings-consumer-mcp"
+  },
+  "homepage": "https://github.com/michaelahern/airthings-consumer-mcp",
   "server": {
     "type": "node",
     "entry_point": "bin/server.js",
@@ -21,6 +26,7 @@
       }
     }
   },
+  "license": "ISC",
   "compatibility": {
     "runtimes": {
       "node": ">=20"

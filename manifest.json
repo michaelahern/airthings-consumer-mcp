@@ -1,5 +1,5 @@
 {
-  "mcpb_version": "0.2",
+  "manifest_version": "0.2",
   "name": "airthings-consumer-mcp",
   "display_name": "Airthings Consumer MCP",
   "version": "0.7.0",

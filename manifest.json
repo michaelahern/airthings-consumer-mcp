@@ -1,0 +1,45 @@
+{
+  "manifest_version": "0.2",
+  "name": "airthings-consumer-mcp",
+  "display_name": "Airthings Consumer MCP",
+  "version": "0.7.0",
+  "description": "A Model Context Protocol (MCP) server for Airthings Air Quality Monitor devices.",
+  "author": {
+    "name": "Michael Ahern"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "bin/server.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/bin/server.js"
+      ],
+      "env": {
+        "AIRTHINGS_CLIENT_ID": "${user_config.client_id}",
+        "AIRTHINGS_CLIENT_SECRET": "${user_config.client_secret}"
+      }
+    }
+  },
+  "compatibility": {
+    "runtimes": {
+      "node": ">=20"
+    }
+  },
+  "user_config": {
+    "client_id": {
+      "type": "string",
+      "title": "Airthings Client ID",
+      "description": "Your Airthings API Client ID",
+      "sensitive": true,
+      "required": true
+    },
+    "client_secret": {
+      "type": "string",
+      "title": "Airthings Client Secret",
+      "description": "Your Airthings API Client Secret",
+      "sensitive": true,
+      "required": true
+    }
+  }
+}

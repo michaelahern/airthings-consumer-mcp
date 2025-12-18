@@ -1,7 +1,7 @@
 {
   "name": "airthings-consumer-mcp",
   "displayName": "Airthings Consumer MCP",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Model Context Protocol (MCP) server for Airthings Air Quality Monitor devices.",
   "keywords": [
     "airthings",
@@ -36,7 +36,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "~1.18",
+    "@modelcontextprotocol/sdk": "~1.25",
     "airthings-consumer-api": "^1"
   },
   "devDependencies": {

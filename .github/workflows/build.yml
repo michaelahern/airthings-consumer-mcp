@@ -20,7 +20,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npx @anthropic-ai/mcpb pack
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: airthings-consumer-mcp-${{ matrix.node-version }}.mcpb
           path: airthings-consumer-mcp.mcpb

@@ -36,7 +36,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "~1.25",
+    "@modelcontextprotocol/sdk": "~1.26",
     "airthings-consumer-api": "^1"
   },
   "devDependencies": {

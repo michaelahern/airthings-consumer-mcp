@@ -1,9 +1,8 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:24",
   "customizations": {
     "vscode": {
       "extensions": [
-        "amazonwebservices.amazon-q-vscode",
         "Anthropic.claude-code",
         "bierner.markdown-preview-github-styles",
         "dbaeumer.vscode-eslint",
@@ -14,8 +13,6 @@
     }
   },
   "updateContentCommand": {
-    "amazon-q-install": ".devcontainer/amazonq.sh",
-    "claude-code-install": "npm install -g @anthropic-ai/claude-code",
     "npm-install": "npm install"
   },
   "postStartCommand": {
